@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #1e3a8a; /* Deep blue */
+            color: #80d0ff; /* Light blue */
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+            text-shadow: 4px 4px #0a1f44;
+        }
+        p {
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.5;
+            white-space: normal; /* Allow text to wrap */
+            overflow: hidden;
+            display: inline-block;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: none; /* Hide button until typing finishes */
+        }
+        button {
+            font-size: 16px;
+            padding: 15px 30px;
+            border: 4px solid #0a1f44;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 4px 4px #0a1f44;
+            background-color: #ffcc00;
+            color: #1e3a8a;
+            font-family: 'Press Start 2P', cursive;
+        }
+        button:active {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello Alexis! 💙</h1>
+    <p id="typewriter"></p>
+    <div class="buttons">
+        <button onclick="goToNextPage()">Click Here!</button>
+    </div>
+
+    <script>
+        const text = "Hey there! I have a very important question to ask you...";
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML = text.substring(0, i + 1) + " |"; // Adds cursor
+                i++;
+                setTimeout(typeWriter, 50); // Speed of typing
+            } else {
+                document.getElementById("typewriter").innerHTML = text; // Remove cursor at the end
+                document.querySelector(".buttons").style.display = "block"; // Show button after typing
+            }
+        }
+
+        function goToNextPage() {
+            window.location.href = "date.html"; // Redirect to second page
+        }
+
+        window.onload = typeWriter; // Start typing on page load
+    </script>
+
+</body>
+</html>

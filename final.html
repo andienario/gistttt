@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See You on March?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            background-color: #1e3a8a; /* Deep blue */
+            color: #80d0ff; /* Light blue */
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            padding: 10px 20px;
+            border: 4px solid #0a1f44;
+            background-color: #ffcc00;
+            color: #1e3a8a;
+            cursor: pointer;
+            box-shadow: 4px 4px #0a1f44;
+            text-decoration: none;
+        }
+        .home-button:active {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 4px 4px #0a1f44;
+            margin-bottom: 20px;
+            white-space: nowrap;
+        }
+        .section {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .option {
+            width: 200px;
+            height: 200px;
+            background-color: #0a1f44;
+            border: 6px solid #80d0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .option img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the placeholder properly */
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px;
+            }
+            .option {
+                width: 170px;
+                height: 170px;
+            }
+            .home-button {
+                font-size: 12px;
+                padding: 8px 15px;
+            }
+        }
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 18px;
+            }
+            .option {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="home-button">🏠 Home</a>
+
+    <h1>See you on March? 💙</h1>
+
+    <div class="section">
+        <h2>Dinner?</h2>
+        <div class="options">
+            <div class="option">
+                <img src="italiannis.png" alt="Restaurant 1">
+            </div>
+            <div class="option">
+                <img src="CIBO.jpg" alt="Restaurant 2">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Dessert?</h2>
+        <div class="options">
+            <div class="option">
+                <img src="llaollao.jpg" alt="Dessert Place">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Photobooth?</h2>
+        <div class="options">
+            <div class="option">
+                <img src="Stills.jpg" alt="Photobooth Spot">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
